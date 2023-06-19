@@ -49,7 +49,7 @@ const mongoController = (req,res,next) => {
 
   
 
-  User.updateOne({username:process.env['USERNAME']},{$push:{"file":imageLocation[0]}}).then(test=> {
+  User.updateOne({username:process.env.USERNAME},{$push:{"file":imageLocation[0]}}).then(test=> {
 
     imageLocation = []
     res.json({
@@ -63,7 +63,7 @@ const mongoController = (req,res,next) => {
 }
 
 const deleteFile =  (req,res) => {
- User.updateOne({ username:process.env['USERNAME']}, {
+ User.updateOne({ username:process.env.USERNAME}, {
     $pull: {
         file: {link: req.body.delete},
     },

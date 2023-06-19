@@ -34,7 +34,7 @@ const getUserByUsername=(data)=>{
 }
 
 const getFilesFromDb = () => {
-  return User.find({username:process.env['USERNAME']})
+  return User.find({username:process.env.USERNAME})
 }
 
 //const uploadFile = (cap,file,id) => {

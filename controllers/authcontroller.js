@@ -33,7 +33,7 @@ const signin = (req,res,next) => {
             if(!result){
                 next(new Error("Please enter correct username or password"))
             }else{
-                const  token = jwt.sign({username:req.body.username}, process.env['JWTKEY']);
+                const  token = jwt.sign({username:req.body.username}, process.env.JWTKEY);
             res.json({
                  status:"Success",
                  token:token,
@@ -41,9 +41,9 @@ const signin = (req,res,next) => {
          
              })
 
-              process.env['USERNAME'] = req.body.username
+              process.env.USERNAME = req.body.username
 
-              console.log(process.env['USERNAME'])
+              console.log(process.env.USERNAME)
 
 
               
