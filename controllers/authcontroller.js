@@ -1,4 +1,5 @@
-
+import * as dotenv from 'dotenv';
+dotenv.config();
 const {createUser,getUserByUsername,getFilesFromDb} = require("../db/db")
 const  jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
