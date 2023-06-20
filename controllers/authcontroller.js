@@ -1,5 +1,4 @@
-import * as dotenv from 'dotenv';
-dotenv.config();
+
 const {createUser,getUserByUsername,getFilesFromDb} = require("../db/db")
 const  jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
@@ -34,7 +33,7 @@ const signin = (req,res,next) => {
             if(!result){
                 next(new Error("Please enter correct username or password"))
             }else{
-                const  token = jwt.sign({username:req.body.username}, process.env.JWTKEY);
+                const  token = jwt.sign({username:req.body.username}, "shhh");
             res.json({
                  status:"Success",
                  token:token,
