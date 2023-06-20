@@ -1,5 +1,4 @@
-import * as dotenv from 'dotenv';
-dotenv.config();
+
 const User=require("../db/schemas/User");
 
 const {fileUploadS3}=require("../services/s3service");
