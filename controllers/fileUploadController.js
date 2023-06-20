@@ -1,7 +1,3 @@
-var crypto = require('crypto');
-
-
-
 
 const User=require("../db/schemas/User");
 
@@ -20,16 +16,7 @@ const s3fileUpload=(req,res,next)=>{
 
     fileUploadS3(req.file).then(data=>{
 
-
-        const crypto = require('crypto');
-crypto.randomInt(100000, 999999, (err, n) => {
-    if (err) throw err;
-  
-      imageLocation.push({link:data.Location,code:`${n}`})
-
-  
-});
-
+      imageLocation.push({link:data.Location})
 
 
 
