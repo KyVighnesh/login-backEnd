@@ -63,6 +63,8 @@ const deleteFile =  (req,res) => {
         })
 });
 
+   console.log(req.body.delete)
+
   }
 
 module.exports = {
